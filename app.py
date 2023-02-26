@@ -22,5 +22,15 @@ def about():  # put application's code here
 def history():  # put application's code here
     return render_template('history.html')
 
+@app.route('/blog')
+def blog():  # put application's code here
+    return render_template('blog.html')
+
+@app.route('/organizational_chart')
+def organizational_chart():  # put application's code here
+    return render_template('organizational_chart.html')
+
+
+
 if __name__ == '__main__':
     app.run()
