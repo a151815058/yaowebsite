@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/site.webmanifest">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Plugins CSS -->
+    <link href="{{ url_for('static',filename='assets/libs/flickity/dist/flickity.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/flickity-fade/flickity-fade.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/fullpage.js/dist/fullpage.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/highlightjs/styles/codepen-embed.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/incline-icons/style.min.css') }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ url_for('static',filename='assets/css/theme.min.css') }}" rel="stylesheet">
+
+    <title>Incline | About</title>
+  </head>
+  <body>
+    <!-- NAVBAR
+    ================================================= -->
+    <nav class="navbar navbar-expand-xl navbar-light  fixed-top">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="base.html">
+          <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+            <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+            <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+          </svg>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Social -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-github"></i>
+                <span class="d-xl-none ml-2">
+                  Github
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-twitter"></i>
+                <span class="d-xl-none ml-2">
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-instagram"></i>
+                <span class="d-xl-none ml-2">
+                  Instagram
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                首頁
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#news" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                最新消息
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('about') }}" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                創立起源
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('history') }}" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                歷史沿革
+              </a>
+            </li>
+            <li class="nav-item  active ">
+              <a href="documentation.html" class="nav-link">
+                組織章程
+              </a>
+            </li>
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url_for('album') }}" target="_blank" class="nav-link">
+                活動花絮
+              </a>
+            </li>
+          </ul>
+
+        </div> <!-- / .navbar-collapse -->
+
+      </div> <!-- / .container -->
+    </nav>
+    <section class="section pb-0">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col">
+
+            <!-- Header -->
+            <div class="header bg-cover" style="background-image: url({{ url_for('static',filename='assets/img/15.jpg') }});"></div>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <!-- ABOUT
+    ================================================== -->
+    <section class="section pb-0">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+
+            <!-- Title -->
+            <h6 class="title">
+              緣起
+            </h6>
+
+          </div>
+          <div class="col-md-5">
+
+            <!-- Heading -->
+            <h3 class="mb-4">
+              同心協力
+            </h3>
+
+            <!-- Content -->
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                整理者，承襲長輩 震富阿叔、銘宗阿叔（大房-第四代）、志鴻，花費相當心力、時間、財力，將姚乙族譜整理，後進者轉換型式成果，借花獻佛於網路平台，讓姚乙子孫眾人能見到，前人整理心血及無私熱情，與有榮焉。
+              </p>
+            </blockquote>
+            <p class="text-muted">
+            </p>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+    <section class="section pb-0">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+
+            <!-- Title -->
+            <h6 class="title">
+              念想
+            </h6>
+
+          </div>
+          <div class="col-md-10">
+
+            <!-- Heading -->
+            <h3 class="mb-4">
+              飲水思源
+            </h3>
+
+            <!-- Subheading -->
+            <p class="text-muted mb-5">
+                從何而來，欲往何去。不知姚氏家族發展緣起、飲水思源，恐白來人世一遭。
+                先祖篳路藍縷、傳承各代，從艱困的環境中拼搏，子孫後代繁衍、立足於先人基礎拓展各方，姚家子孫發展至今、人才輩出，每每子孫同輩或後輩相見，卻點頭而不相識，近年家族每遭
+                倚重長輩仙逝噩耗，除不捨外更是惋惜，長輩所傳承之無私、公益精神，容音宛在，念茲在茲話語猶如春風在耳，承先啟後是驅策後生晚輩前進之動力。
+            </p>
+
+
+          </div>
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+    <!-- QUOTE
+    ================================================== -->
+    <section class="section">
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-9">
+
+            <!-- Quote -->
+            <div class="quote">
+              <blockquote class="quote-blockquote">
+                <p class="quote-blockquote-content">
+                    落其實者思其樹，飲其流者懷其源。
+                </p>
+                <footer class="quote-blockquote-footer">
+                  <span class="text-zigzag">
+                    ——南北朝·庾信《徵調曲》
+                  </span>
+                </footer>
+              </blockquote>
+            </div> <!-- / .quote -->
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+
+
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="section bg-dark">
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+      <!--Content -->
+      <div class="container">
+        <div class="row align-self-center">
+          <div class="col-md-auto">
+
+            <!-- Brand -->
+            <p>
+              <a href="#" class="footer-brand text-white">
+                <svg class="footer-brand-svg" viewBox="0 0 235 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M0 0 L 20 10 L 0 20 Z" class="text-primary" fill="currentColor"></path>
+                  <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+                  <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+                </svg>
+              </a>
+            </p>
+
+          </div>
+          <div class="col-md">
+
+            <!-- Links -->
+            <ul class="list-unstyled list-inline text-md-right">
+              <li class="list-inline-item mr-2">
+                <a href="#" class="text-white">
+                  Terms and conditions
+                </a>
+              </li>
+              <li class="list-inline-item mr-2">
+                <a href="#" class="text-white">
+                  Privacy policy
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-white">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center">
+          <div class="col-md">
+
+            <!-- Copyright -->
+            <p class="text-white text-muted">
+              <small>
+                &copy; Copyright <span class="current-year"></span> Simpleqode. All rights reserved.
+              </small>
+            </p>
+
+          </div>
+          <div class="col-md">
+
+            <!-- Social links -->
+            <ul class="list-inline list-unstyled text-md-right">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item ml-3">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item ml-3">
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Global JS -->
+    <script src="{{url_for('static', filename='assets/libs/jquery/dist/jquery.min.js')}}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+    <!-- Plugins JS -->
+    <script src="{{url_for('static', filename='assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/flickity/dist/flickity.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/flickity-fade/flickity-fade.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/jquery-parallax.js/parallax.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/waypoints/lib/jquery.waypoints.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/waypoints/lib/shortcuts/inview.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/fullpage.js/vendors/scrolloverflow.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/fullpage.js/dist/fullpage.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/highlightjs/highlight.pack.min.js')}}"></script>
+
+
+    <!-- Theme JS -->
+    <script src="{{url_for('static', filename='assets/js/theme.min.js')}}"></script>
+
+  </body>
+</html>

@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="assets/ico/site.webmanifest">
+    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Plugins CSS -->
+    <link href="{{ url_for('static',filename='assets/libs/flickity/dist/flickity.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/flickity-fade/flickity-fade.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/fullpage.js/dist/fullpage.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/highlightjs/styles/codepen-embed.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename='assets/libs/incline-icons/style.min.css') }}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{ url_for('static',filename='assets/css/theme.min.css') }}" rel="stylesheet">
+
+    <title>Incline | Product</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR
+    ================================================= -->
+    <nav class="navbar navbar-expand-xl navbar-light  fixed-top">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="base.html">
+          <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+            <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+            <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+          </svg>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Social -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-github"></i>
+                <span class="d-xl-none ml-2">
+                  Github
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-twitter"></i>
+                <span class="d-xl-none ml-2">
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-instagram"></i>
+                <span class="d-xl-none ml-2">
+                  Instagram
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                首頁
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#news" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                最新消息
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('about') }}" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                創立起源
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('history') }}" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                歷史沿革
+              </a>
+            </li>
+            <li class="nav-item  active ">
+              <a href="documentation.html" class="nav-link">
+                組織章程
+              </a>
+            </li>
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url_for('album') }}" target="_blank" class="nav-link">
+                活動花絮
+              </a>
+            </li>
+          </ul>
+
+        </div> <!-- / .navbar-collapse -->
+
+      </div> <!-- / .container -->
+    </nav>
+
+    <!-- HERO
+    ================================================== -->
+    <section class="section section-top section-full">
+
+      <!-- Cover -->
+      <div class="bg-cover" style="background-image: url({{ url_for('static',filename='assets/img/ancestor.jpg') }});"></div>
+
+      <!-- Overlay -->
+      <div class="bg-overlay"></div>
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-lg-5 align-self-end">
+
+
+            <!-- Heading -->
+            <h1 class="text-white mb-4" data-toggle="animation" data-animation="fadeUp" data-animation-order="1" data-animation-trigger="load">
+              先祖：姚乙公
+            </h1>
+
+            <!-- Subheading -->
+            <p class="text-white text-muted mb-5 mb-md-0" data-toggle="animation" data-animation="fadeUp" data-animation-order="2" data-animation-trigger="load">
+              我們共同的祖先姚乙公，生於西元1859年，適逢清朝末年，戰禍綿延，民不聊生的時代。約西元1880年先祖正值年輕力壯，單身一人來到彰化寓埔村，並受雇於黃笚一家，從事農耕工作，因工作努力勤奮，深受黃姓雇主信賴和倚重。黃姓雇主特將其長女許配，並於西元1888年與黃氏麥結為連。傳承至今，已至第六代，子孫約百餘人。 「姚乙公」與「黃氏麥」兩位先祖，共育有五子一女， 即現今「姚氏五房」由來，世居寓埔村祖宅現址。
+            </p>
+
+          </div>
+          <div class="col-md-4 col-lg-7 align-self-center d-flex justify-content-end">
+
+            <!-- Heading -->
+            <h4 class="text-vertical text-white mb-0">
+              <span>家族史</span>
+            </h4>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </section>
+<!-- MODELS
+    ================================================== -->
+    <section class="section">
+      <div class="model">
+
+        <!-- Content -->
+        <div class="container">
+          <div class="row align-items-center mb-5">
+            <div class="col-12">
+
+              <div class="slider slider-no-controls" id="productSliderLg" data-bind="slider" data-target="#productSliderSm">
+                <div class="slider-item">
+
+                  <div class="row">
+                    <div class="col-md-1 d-flex align-self-center d-flex justify-content-end">
+
+                      <!-- Category -->
+                      <div class="model-cat mb-4 mb-md-0">
+                        <h4 class="text-vertical">
+                          <span class="model-cat-title text-zigzag fade show">
+                            各房介紹
+                          </span>
+                        </h4>
+                      </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                      <!-- Heading -->
+                      <h3 class="model-heading mb-4 fade show">
+                        大房介紹
+                      </h3>
+
+                      <!-- Content -->
+                      <div class="model-content mb-5 mb-md-0 fade show">
+
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote">
+                          <p class="mb-0">
+                            姚碟公
+                          </p>
+                        </blockquote>
+
+                        <!-- Content -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam et consequuntur fugiat, numquam consequatur ducimus dolorem maxime ratione!
+                        </p>
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-outline-primary">
+                          Ready More
+                        </a>
+
+                      </div> <!-- / .model-content -->
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="slider-item">
+
+                  <div class="row">
+                    <div class="col-md-1 d-flex align-self-center d-flex justify-content-end">
+
+                      <!-- Category -->
+                      <div class="model-cat mb-4 mb-md-0">
+                        <h4 class="text-vertical">
+                          <span class="model-cat-title text-zigzag fade show">
+                            各房介紹
+                          </span>
+                        </h4>
+                      </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                      <!-- Heading -->
+                      <h3 class="model-heading mb-4 fade show">
+                        二房介紹
+                      </h3>
+
+                      <!-- Content -->
+                      <div class="model-content mb-5 mb-md-0 fade show">
+
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote">
+                          <p class="mb-0">
+                            姚皮公
+                          </p>
+                        </blockquote>
+
+                        <!-- Content -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam et consequuntur fugiat, numquam consequatur ducimus dolorem maxime ratione!
+                        </p>
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-outline-primary">
+                          Ready More
+                        </a>
+
+                      </div> <!-- / .model-content -->
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="slider-item">
+
+                  <div class="row">
+                    <div class="col-md-1 d-flex align-self-center d-flex justify-content-end">
+
+                      <!-- Category -->
+                      <div class="model-cat mb-4 mb-md-0">
+                        <h4 class="text-vertical">
+                          <span class="model-cat-title text-zigzag fade show">
+                            各房介紹
+                          </span>
+                        </h4>
+                      </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                      <!-- Heading -->
+                      <h3 class="model-heading mb-4 fade show">
+                        三房介紹
+                      </h3>
+
+                      <!-- Content -->
+                      <div class="model-content mb-5 mb-md-0 fade show">
+
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote">
+                          <p class="mb-0">
+                            姚番公
+                          </p>
+                        </blockquote>
+
+                        <!-- Content -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam et consequuntur fugiat, numquam consequatur ducimus dolorem maxime ratione!
+                        </p>
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-outline-primary">
+                          Ready More
+                        </a>
+
+                      </div> <!-- / .model-content -->
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="slider-item">
+
+                  <div class="row">
+                    <div class="col-md-1 d-flex align-self-center d-flex justify-content-end">
+
+                      <!-- Category -->
+                      <div class="model-cat mb-4 mb-md-0">
+                        <h4 class="text-vertical">
+                          <span class="model-cat-title text-zigzag fade show">
+                            各房介紹
+                          </span>
+                        </h4>
+                      </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                      <!-- Heading -->
+                      <h3 class="model-heading mb-4 fade show">
+                        四房介紹
+                      </h3>
+
+                      <!-- Content -->
+                      <div class="model-content mb-5 mb-md-0 fade show">
+
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote">
+                          <p class="mb-0">
+                            姚壽公
+                          </p>
+                        </blockquote>
+
+                        <!-- Content -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam et consequuntur fugiat, numquam consequatur ducimus dolorem maxime ratione!
+                        </p>
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-outline-primary">
+                          Ready More
+                        </a>
+
+                      </div> <!-- / .model-content -->
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+                <div class="slider-item">
+
+                  <div class="row">
+                    <div class="col-md-1 d-flex align-self-center d-flex justify-content-end">
+
+                      <!-- Category -->
+                      <div class="model-cat mb-4 mb-md-0">
+                        <h4 class="text-vertical">
+                          <span class="model-cat-title text-zigzag fade show">
+                            各房介紹
+                          </span>
+                        </h4>
+                      </div>
+
+                    </div>
+                    <div class="col-md-4">
+
+                      <!-- Heading -->
+                      <h3 class="model-heading mb-4 fade show">
+                        五房介紹
+                      </h3>
+
+                      <!-- Content -->
+                      <div class="model-content mb-5 mb-md-0 fade show">
+
+                        <!-- Blockquote -->
+                        <blockquote class="blockquote">
+                          <p class="mb-0">
+                            姚五公
+                          </p>
+                        </blockquote>
+
+                        <!-- Content -->
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum ipsam et consequuntur fugiat, numquam consequatur ducimus dolorem maxime ratione!
+                        </p>
+
+                        <!-- Button -->
+                        <a href="#!" class="btn btn-outline-primary">
+                          Ready More
+                        </a>
+
+                      </div> <!-- / .model-content -->
+
+                    </div>
+                  </div> <!-- / .row -->
+                </div>
+              </div> <!-- / .slider -->
+
+            </div>
+          </div> <!-- / .row -->
+        </div> <!-- / .container -->
+
+      </div> <!-- / .model -->
+    </section>
+
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="section bg-dark">
+
+      <!-- Triangles -->
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"></div>
+      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+
+      <!--Content -->
+      <div class="container">
+        <div class="row align-self-center">
+          <div class="col-md-auto">
+
+            <!-- Brand -->
+            <p>
+              <a href="#" class="footer-brand text-white">
+                <svg class="footer-brand-svg" viewBox="0 0 235 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <path d="M0 0 L 20 10 L 0 20 Z" class="text-primary" fill="currentColor"></path>
+                  <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+                  <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+                </svg>
+              </a>
+            </p>
+
+          </div>
+          <div class="col-md">
+
+            <!-- Links -->
+            <ul class="list-unstyled list-inline text-md-right">
+              <li class="list-inline-item mr-2">
+                <a href="#" class="text-white">
+                  Terms and conditions
+                </a>
+              </li>
+              <li class="list-inline-item mr-2">
+                <a href="#" class="text-white">
+                  Privacy policy
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-white">
+                  Contact us
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+        <div class="row align-items-center">
+          <div class="col-md">
+
+            <!-- Copyright -->
+            <p class="text-white text-muted">
+              <small>
+                &copy; Copyright <span class="current-year"></span> Simpleqode. All rights reserved.
+              </small>
+            </p>
+
+          </div>
+          <div class="col-md">
+
+            <!-- Social links -->
+            <ul class="list-inline list-unstyled text-md-right">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li class="list-inline-item ml-3">
+                <a href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item ml-3">
+                <a href="#">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </div> <!-- / .row -->
+      </div> <!-- / .container -->
+
+    </footer>
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <!-- Global JS -->
+    <script src="{{url_for('static', filename='assets/libs/jquery/dist/jquery.min.js')}}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnKt8_N4-FKOnhI_pSaDL7g_g-XI1-R9E"></script>
+
+    <!-- Plugins JS -->
+    <script src="{{url_for('static', filename='assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/flickity/dist/flickity.pkgd.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/flickity-fade/flickity-fade.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/jquery-parallax.js/parallax.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/waypoints/lib/jquery.waypoints.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/waypoints/lib/shortcuts/inview.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/fullpage.js/vendors/scrolloverflow.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/fullpage.js/dist/fullpage.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/libs/highlightjs/highlight.pack.min.js')}}"></script>
+
+
+    <!-- Theme JS -->
+    <script src="{{url_for('static', filename='assets/js/theme.min.js')}}"></script>
+
+  </body>
+</html>
