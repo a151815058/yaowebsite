@@ -31,18 +31,6 @@
   </head>
   <body>
 
-    <!-- Background image -->
-    <div
-    class="bg-image d-flex justify-content-center align-items-center"
-    style="
-        background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp');
-        height: 100vh;
-    "
-    >
-    <h1 class="text-white">姚氏宗親</h1>
-    </div>
-<!-- Background image -->
-
     <!-- NAVBAR
     ================================================= -->
     <nav class="navbar navbar-expand-xl navbar-light  fixed-top">
@@ -101,12 +89,12 @@
           <!-- Links -->
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('index') }}" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 首頁
               </a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#news" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('news') }}" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 最新消息
               </a>
             </li>
@@ -142,11 +130,8 @@
       </div> <!-- / .container -->
     </nav>
 
-    <section class="section">
-        {% block body %}
-        {% endblock %}
-    </section>
-
+    {% block body %}
+    {% endblock %}
     <!-- FOOTER
     ================================================== -->
     <footer class="section bg-dark">

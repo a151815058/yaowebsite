@@ -29,6 +29,104 @@
 
   </head>
   <body>
+      <!-- NAVBAR
+    ================================================= -->
+    <nav class="navbar navbar-expand-xl navbar-light  fixed-top">
+      <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="base.html">
+          <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
+            <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
+            <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+          </svg>
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+          <!-- Social -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-github"></i>
+                <span class="d-xl-none ml-2">
+                  Github
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-twitter"></i>
+                <span class="d-xl-none ml-2">
+                  Twitter
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fab fa-instagram"></i>
+                <span class="d-xl-none ml-2">
+                  Instagram
+                </span>
+              </a>
+            </li>
+          </ul>
+
+          <!-- Links -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                首頁
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#news" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                最新消息
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('about') }}" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                創立起源
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="{{ url_for('history') }}" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                歷史沿革
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="documentation.html" class="nav-link">
+                組織章程
+              </a>
+            </li>
+            <li class="nav-item-divider">
+              <span class="nav-link">
+                <span></span>
+              </span>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url_for('album') }}" target="_blank" class="nav-link">
+                活動花絮
+              </a>
+            </li>
+          </ul>
+
+        </div> <!-- / .navbar-collapse -->
+
+      </div> <!-- / .container -->
+    </nav>
     <!-- LATEST
     ================================================== -->
     <section>
