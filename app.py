@@ -29,9 +29,9 @@ def history():  # put application's code here
 def blog():  # put application's code here
     return render_template('bulletin.html',index=False)
 
-@app.route('/organizational_chart', methods=['GET', 'POST'])
-def organizational_chart():  # put application's code here
-    return render_template('organizational_chart.html',index=False)
+@app.route('/four_organizational_chart', methods=['GET', 'POST'])
+def four_organizational_chart():  # put application's code here
+    return render_template('four_organizational_chart.html', index=False)
 
 
 
