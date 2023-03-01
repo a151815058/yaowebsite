@@ -1,16 +1,10 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+{% extends "base.html" %}
+{% block body %}
 
     <link href="{{ url_for('static',filename='css/bootstrap-treeview.css') }}" rel="stylesheet">
-
     <title>四房世系表</title>
-  </head>
-  <body>
+
+<section class="section section-top section-full">
   <h2>姚乙-家族 四房世系表</h2>
     <div class="body genealogy-body genealogy-scroll">
         <div class="genealogy-tree">
@@ -21,7 +15,7 @@
                             <div class="member-image">
                                 <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                 <div class="member-details">
-                                    <h3>(第一代)<br>姚乙<br>妻-黃氏麥</h3>
+                                    <h6>(第一代)<br>姚乙<br>妻-黃氏麥</h6>
                                 </div>
                             </div>
                         </div>
@@ -33,9 +27,9 @@
                                     <div class="member-image">
                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                         <div class="member-details">
-                                            <h3>
+                                            <h6>
                                                 (第二代)<br>四子-姚壽<br>四媳-柯氏梗
-                                            </h3>
+                                            </h6>
                                         </div>
                                     </div>
                                 </div>
@@ -47,7 +41,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>長子-姚金龍<br>長媳-王美女</h3>
+                                                    <h6>(第三代)<br>長子-姚金龍<br>長媳-王美女</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -59,7 +53,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長子-姚朝陽<br>長媳-黃寶專</h3>
+                                                            <h6>(第四代)<br>長子-姚朝陽<br>長媳-黃寶專</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -71,7 +65,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長女-姚佳琪</h3>
+                                                                    <h6>(第五代)<br>長女-姚佳琪</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -83,7 +77,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>次女-姚佳華</h3>
+                                                                    <h6>(第五代)<br>次女-姚佳華</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -98,7 +92,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長女-姚阿霞</h3>
+                                                            <h6>(第四代)<br>長女-姚阿霞</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -110,7 +104,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>次女-姚麗嬌</h3>
+                                                            <h6>(第四代)<br>次女-姚麗嬌</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -122,7 +116,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>三女-姚麗娟</h3>
+                                                            <h6>(第四代)<br>三女-姚麗娟</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -134,7 +128,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>四女-姚麗雯</h3>
+                                                            <h6>(第四代)<br>四女-姚麗雯</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -148,7 +142,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>次子-姚金火<br>次媳-林柑</h3>
+                                                    <h6>(第三代)<br>次子-姚金火<br>次媳-林柑</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -160,7 +154,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長子-姚有鑫<br>長媳-董綉櫻</h3>
+                                                            <h6>(第四代)<br>長子-姚有鑫<br>長媳-董綉櫻</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -172,7 +166,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長子-姚錦成</h3>
+                                                                    <h6>(第五代)<br>長子-姚錦成</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -184,7 +178,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>次子-姚佳緯</h3>
+                                                                    <h6>(第五代)<br>次子-姚佳緯</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -196,7 +190,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長女-姚慧敏</h3>
+                                                                    <h6>(第五代)<br>長女-姚慧敏</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -208,7 +202,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>次女-姚麗華</h3>
+                                                                    <h6>(第五代)<br>次女-姚麗華</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -222,7 +216,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>次子-姚櫻堂<br>次媳-施麗珍</h3>
+                                                            <h6>(第四代)<br>次子-姚櫻堂<br>次媳-施麗珍</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -234,7 +228,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長子-姚武</h3>
+                                                                    <h6>(第五代)<br>長子-姚武</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -246,7 +240,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>次子-姚文</h3>
+                                                                    <h6>(第五代)<br>次子-姚文</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -258,7 +252,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長女-姚欣玉</h3>
+                                                                    <h6>(第五代)<br>長女-姚欣玉</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -272,7 +266,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>三子-姚清勝<br>三媳-黃美珍</h3>
+                                                            <h6>(第四代)<br>三子-姚清勝<br>三媳-黃美珍</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -284,7 +278,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長子-姚承翰</h3>
+                                                                    <h6>(第五代)<br>長子-姚承翰</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -296,7 +290,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長女-姚奕瑋</h3>
+                                                                    <h6>(第五代)<br>長女-姚奕瑋</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -312,7 +306,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                     <h3>(第三代)<br>三男-姚金安</h3>
+                                                     <h6>(第三代)<br>三男-姚金安</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -324,7 +318,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>四子-姚金城<br>四媳-黃來發</h3>
+                                                    <h6>(第三代)<br>四子-姚金城<br>四媳-黃來發</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -336,7 +330,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長子-姚震富<br>長媳-張麗玉</h3>
+                                                            <h6>(第四代)<br>長子-姚震富<br>長媳-張麗玉</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -348,7 +342,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長女-姚宜婷</h3>
+                                                                    <h6>(第五代)<br>長女-姚宜婷</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -360,7 +354,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>次女-姚佩彤</h3>
+                                                                    <h6>(第五代)<br>次女-姚佩彤</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -372,7 +366,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>三女-姚佩純</h3>
+                                                                    <h6>(第五代)<br>三女-姚佩純</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -384,7 +378,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>四女-姚家臻</h3>
+                                                                    <h6>(第五代)<br>四女-姚家臻</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -398,7 +392,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>次子-姚睿豐<br>次媳-許心瑀</h3>
+                                                            <h6>(第四代)<br>次子-姚睿豐<br>次媳-許心瑀</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -410,7 +404,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>長子-姚榮尹</h3>
+                                                                    <h6>(第五代)<br>長子-姚榮尹</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -422,7 +416,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>次子-姚登杰</h3>
+                                                                    <h6>(第五代)<br>次子-姚登杰</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -434,7 +428,7 @@
                                                             <div class="member-image">
                                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                                 <div class="member-details">
-                                                                    <h3>(第五代)<br>三子-姚秉溢</h3>
+                                                                    <h6>(第五代)<br>三子-姚秉溢</h6>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -448,7 +442,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長女-姚美梨</h3>
+                                                            <h6>(第四代)<br>長女-姚美梨</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -460,7 +454,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>次女-姚美月</h3>
+                                                            <h6>(第四代)<br>次女-姚美月</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -472,7 +466,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>三女-姚晏而</h3>
+                                                            <h6>(第四代)<br>三女-姚晏而</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -486,7 +480,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/man_woman.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>五子-姚金福<br>五媳-郭綉葵</h3>
+                                                    <h6>(第三代)<br>五子-姚金福<br>五媳-郭綉葵</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -498,7 +492,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長子-姚錫正</h3>
+                                                            <h6>(第四代)<br>長子-姚錫正</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -510,7 +504,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>次子-姚升富</h3>
+                                                            <h6>(第四代)<br>次子-姚升富</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -522,7 +516,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>長女-姚麗香</h3>
+                                                            <h6>(第四代)<br>長女-姚麗香</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -534,7 +528,7 @@
                                                     <div class="member-image">
                                                         <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                         <div class="member-details">
-                                                            <h3>(第四代)<br>次女-姚思岑</h3>
+                                                            <h6>(第四代)<br>次女-姚思岑</h6>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -548,7 +542,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/man.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>六男-姚金財</h3>
+                                                    <h6>(第三代)<br>六男-姚金財</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -560,7 +554,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>長女-姚金珠</h3>
+                                                    <h6>(第三代)<br>長女-姚金珠</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -572,7 +566,7 @@
                                             <div class="member-image">
                                                 <img src="{{ url_for('static',filename='assets/img/woman.png') }}" alt="Member">
                                                 <div class="member-details">
-                                                    <h3>(第三代)<br>次女-姚金玉</h3>
+                                                    <h6>(第三代)<br>次女-姚金玉</h6>
                                                 </div>
                                             </div>
                                         </div>
@@ -586,13 +580,9 @@
             </ul>
         </div>
     </div>
+</section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="{{url_for('static', filename='assets/js/bootstrap-treeview.js')}}"></script>
-
-
-
-  </body>
-
-</html>
+{% endblock %}
 
 
