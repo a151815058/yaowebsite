@@ -1,7 +1,8 @@
 from flask import Flask
 from flask import render_template
-from flask import redirect
-from flask import  request
+
+import s3_functions
+from s3_functions import list_files, upload_file, list_image
 
 app = Flask(__name__)
 
@@ -19,11 +20,13 @@ def album():  # put application's code here
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():  # put application's code here
-    return render_template('about.html',index=False)
+    about_pic = s3_functions.list_image('yaoweb')
+    return render_template('about.html',about_pic=about_pic[3],index=False)
 
 @app.route('/history', methods=['GET', 'POST'])
-def history():  # put application's code here
-    return render_template('history.html',index=False)
+def history():
+    history_pic = s3_functions.list_image('yaoweb')
+    return render_template('history.html',history_pic=history_pic[4],index=False)
 
 @app.route('/blog', methods=['GET', 'POST'])
 def blog():  # put apfirst_organizational_chartplication's code here
@@ -52,6 +55,5 @@ def five_organizational_chart():  # put application's code here
 
 
 if __name__ == '__main__':
-    app.config['TEMPLATES_AUTO_RELOAD'] = True
-    app.jinja_env.auto_reload = True
-    app.run(debug=True)
+    from waitress import serve
+    serve(app, host='0.0.0.0', port=8080)
