@@ -26,13 +26,29 @@ def history():  # put application's code here
     return render_template('history.html',index=False)
 
 @app.route('/blog', methods=['GET', 'POST'])
-def blog():  # put application's code here
+def blog():  # put apfirst_organizational_chartplication's code here
     return render_template('bulletin.html',index=False)
 
 @app.route('/four_organizational_chart', methods=['GET', 'POST'])
 def four_organizational_chart():  # put application's code here
     return render_template('four_organizational_chart.html', index=False)
 
+
+@app.route('/first_organizational_chart', methods=['GET', 'POST'])
+def first_organizational_chart():  # put application's code here
+    return render_template('first_organizational_chart.html', index=False)
+
+@app.route('/second_organizational_chart', methods=['GET', 'POST'])
+def second_organizational_chart():  # put application's code here
+    return render_template('second_organizational_chart.html', index=False)
+
+@app.route('/thired_organizational_chart', methods=['GET', 'POST'])
+def thired_organizational_chart():  # put application's code here
+    return render_template('thired_organizational_chart.html', index=False)
+
+@app.route('/five_organizational_chart', methods=['GET', 'POST'])
+def five_organizational_chart():  # put application's code here
+    return render_template('five_organizational_chart.html', index=False)
 
 
 if __name__ == '__main__':
