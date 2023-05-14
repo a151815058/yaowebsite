@@ -1,0 +1,21 @@
+{% extends "yaoadmin_base.html" %} {% block body %}
+<div class="container-fluid g-0">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="pt-4"></i>首頁</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-white" style="background-color: #4b8df8">
+        <div class="card-header"> <i class="bi bi-wrench"></i></div>
+        <div class="card-body bg-light text-dark">
+          <h5>{{current_user.username}} 您好~</h5>
+          <h5>歡迎使用CMS網站管理系統~~</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

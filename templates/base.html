@@ -1,58 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/ico/favicon-16x16.png">
-    <link rel="manifest" href="assets/ico/site.webmanifest">
-    <link rel="mask-icon" href="assets/ico/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/ico/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/ico/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/ico/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/ico/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/ico/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="assets/ico/favicon.ico" />
+
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="assets/ico/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Plugins CSS -->
-      <link href="{{ url_for('static',filename='assets/libs/flickity/dist/flickity.min.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static',filename='assets/libs/flickity-fade/flickity-fade.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static',filename='assets/libs/fullpage.js/dist/fullpage.min.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static',filename='assets/libs/highlightjs/styles/codepen-embed.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static',filename='assets/libs/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
-      <link href="{{ url_for('static',filename='assets/libs/incline-icons/style.min.css') }}" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/zoom.css')}}"
+    />
+    <link
+      href="{{ url_for('static',filename='assets/libs/flickity/dist/flickity.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static',filename='assets/libs/flickity-fade/flickity-fade.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static',filename='assets/libs/fullpage.js/dist/fullpage.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static',filename='assets/libs/highlightjs/styles/codepen-embed.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static',filename='assets/libs/@fortawesome/fontawesome-free/css/all.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static',filename='assets/libs/incline-icons/style.min.css') }}"
+      rel="stylesheet"
+    />
 
     <!-- Theme CSS -->
-      <link href="{{ url_for('static',filename='assets/css/theme.min.css') }}" rel="stylesheet">
+
+    <link
+      href="{{ url_for('static',filename='assets/css/theme.min.css') }}"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"
+    ></script>
 
     <title>姚氏宗親會</title>
   </head>
   <body>
-
     <!-- NAVBAR
     ================================================= -->
-    <nav class="navbar navbar-expand-xl navbar-light  fixed-top">
+    <nav class="navbar navbar-expand-xl navbar-light fixed-top pt-1 pb-1">
       <div class="container">
-
         <!-- Brand -->
-        <a class="navbar-brand" href="base.html">
-          <svg class="navbar-brand-svg" viewBox="0 0 245 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path d="M0 0 L 20 10 L 0 20 Z" class="navbar-brand-svg-i" fill="currentColor"></path>
-            <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
-            <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
-          </svg>
+        <a class="navbar-brand" href="{{ url_for('index') }}">
+          <img
+            src="{{url_for('static',filename='assets/ico/Yao_logo_2.png')}}"
+            alt="ss"
+            height="60"
+          />
         </a>
 
         <!-- Toggler -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
-
           <!-- Social -->
           <ul class="navbar-nav mr-auto">
             <li class="nav-item-divider">
@@ -63,48 +132,46 @@
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fab fa-github"></i>
-                <span class="d-xl-none ml-2">
-                  Github
-                </span>
+                <span class="d-xl-none ml-2"> Github </span>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fab fa-twitter"></i>
-                <span class="d-xl-none ml-2">
-                  Twitter
-                </span>
+                <span class="d-xl-none ml-2"> Twitter </span>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
                 <i class="fab fa-instagram"></i>
-                <span class="d-xl-none ml-2">
-                  Instagram
-                </span>
+                <span class="d-xl-none ml-2"> Instagram </span>
               </a>
             </li>
           </ul>
 
           <!-- Links -->
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ url_for('index') }}" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item">
+              <a href="{{ url_for('index') }}" target="_self" class="nav-link">
                 首頁
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ url_for('news') }}" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item">
+              <a href="{{ url_for('news') }}" target="_self" class="nav-link">
                 最新消息
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ url_for('about') }}" id="navbarLandings" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item">
+              <a href="{{ url_for('about') }}" target="_self" class="nav-link">
                 創立起源
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="{{ url_for('history') }}" id="navbarPages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item">
+              <a
+                href="{{ url_for('history') }}"
+                target="_self"
+                class="nav-link"
+              >
                 歷史沿革
               </a>
             </li>
@@ -114,80 +181,93 @@
               </span>
             </li>
             <li class="nav-item">
-              <a href="{{ url_for('album') }}" target="_blank" class="nav-link">
+              <a href="{{ url_for('album') }}" target="_self" class="nav-link">
                 活動花絮
               </a>
             </li>
           </ul>
-
-        </div> <!-- / .navbar-collapse -->
-
-      </div> <!-- / .container -->
+        </div>
+        <!-- / .navbar-collapse -->
+      </div>
+      <!-- / .container -->
     </nav>
 
-    {% block body %}
-    {% endblock %}
+    {% block body %} {% endblock %}
     <!-- FOOTER
     ================================================== -->
     <footer class="section bg-dark">
-
       <!-- Triangles -->
-      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"></div>
-      <div class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"></div>
+      <div
+        class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-left"
+      ></div>
+      <div
+        class="bg-triangle bg-triangle-light bg-triangle-bottom bg-triangle-right"
+      ></div>
 
       <!--Content -->
       <div class="container">
         <div class="row align-self-center">
           <div class="col-md-auto">
-
             <!-- Brand -->
             <p>
               <a href="#" class="footer-brand text-white">
-                <svg class="footer-brand-svg" viewBox="0 0 235 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <path d="M0 0 L 20 10 L 0 20 Z" class="text-primary" fill="currentColor"></path>
-                  <path d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z" fill="currentColor"></path>
-                  <text x="40" y="70" font-family="Arial, sans-serif" font-size="60" font-weight="bold" letter-spacing="-.025em" fill="currentColor">incline.</text>
+                <svg
+                  class="footer-brand-svg"
+                  viewBox="0 0 235 80"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <path
+                    d="M0 0 L 20 10 L 0 20 Z"
+                    class="text-primary"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    d="M0 30 L 20 40 L 0 50 Z M20 45 L 0 55 L 20 65 Z M0 60 L 20 70 L 0 80 Z"
+                    fill="currentColor"
+                  ></path>
+                  <text
+                    x="40"
+                    y="70"
+                    font-family="Arial, sans-serif"
+                    font-size="60"
+                    font-weight="bold"
+                    letter-spacing="-.025em"
+                    fill="currentColor"
+                  >
+                    incline.
+                  </text>
                 </svg>
               </a>
             </p>
-
           </div>
           <div class="col-md">
-
             <!-- Links -->
             <ul class="list-unstyled list-inline text-md-right">
               <li class="list-inline-item mr-2">
-                <a href="#" class="text-white">
-                  Terms and conditions
-                </a>
+                <a href="#" class="text-white"> Terms and conditions </a>
               </li>
               <li class="list-inline-item mr-2">
-                <a href="#" class="text-white">
-                  Privacy policy
-                </a>
+                <a href="#" class="text-white"> Privacy policy </a>
               </li>
               <li class="list-inline-item">
-                <a href="#" class="text-white">
-                  Contact us
-                </a>
+                <a href="#" class="text-white"> Contact us </a>
               </li>
             </ul>
-
           </div>
-        </div> <!-- / .row -->
+        </div>
+        <!-- / .row -->
         <div class="row align-items-center">
           <div class="col-md">
-
             <!-- Copyright -->
             <p class="text-white text-muted">
               <small>
-                &copy; Copyright <span class="current-year"></span> Simpleqode. All rights reserved.
+                &copy; Copyright <span class="current-year"></span> Simpleqode.
+                All rights reserved.
               </small>
             </p>
-
           </div>
           <div class="col-md">
-
             <!-- Social links -->
             <ul class="list-inline list-unstyled text-md-right">
               <li class="list-inline-item">
@@ -206,11 +286,11 @@
                 </a>
               </li>
             </ul>
-
           </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
     </footer>
 
     <!-- JAVASCRIPT
@@ -230,9 +310,12 @@
     <script src="{{url_for('static', filename='assets/libs/fullpage.js/dist/fullpage.min.js')}}"></script>
     <script src="{{url_for('static', filename='assets/libs/highlightjs/highlight.pack.min.js')}}"></script>
 
-
     <!-- Theme JS -->
-    <link href="{{ url_for('static',filename='assets/js/theme.min.js') }}" rel="text/javascript">
-
+    <link
+      href="{{ url_for('static',filename='assets/js/theme.min.js') }}"
+      rel="text/javascript"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/zoom.js')}}"></script>
   </body>
 </html>

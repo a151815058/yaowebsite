@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/zoom.css')}}"
+    />
+
+    <style>
+      .col-fixed {
+        display: flex;
+        flex: 0 1 200px;
+        justify-content: center;
+        height: 100%;
+        position: sticky;
+        top: 86px;
+        padding: 0;
+        margin-left: -12px;
+      }
+      .btn-primary {
+        border-radius: 0px;
+        background-color: #343a40;
+        border: none;
+      }
+      @media only screen and (max-width: 991px) {
+        .col-fixed {
+          display: none;
+        }
+        .col-fixed2 a {
+          text-align: start;
+        }
+      }
+      @media only screen and (min-width: 991px) {
+        .col-fixed2 {
+          display: none;
+        }
+      }
+    </style>
+
+    <title>姚乙宗親會後台管理系統</title>
+  </head>
+
+  <body>
+    <div class="container-fluid" style="background: #343a40; min-height: 100vh">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark sticky-top"
+        style="background: #343a40"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand fs-2" href="#">
+            <img
+              src="{{ url_for('static',filename='assets/ico/Yao_logo_1.png') }}"
+              alt="logo"
+              width="100"
+              height="60"
+              class="d-inline-block align-text-center"
+            />姚氏後台管理系統</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item col-fixed2">
+                <a
+                  class="btn btn-primary btn-secondary fs-5 w-100"
+                  href="{{ url_for('yaoadmin_index')}}"
+                  ><i class="bi bi-house-fill"></i>
+                  首頁
+                </a>
+              </li>
+              <li class="nav-item col-fixed2">
+                <a
+                  class="btn btn-primary btn-secondary fs-5 w-100"
+                  href="{{ url_for('yaoadmin_album')}}"
+                  ><i class="bi bi-image"></i>
+                  活動花絮
+                </a>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-end align-items-center">
+              <p class="fs-3 text-light align-middle m-0 p-2">
+                {{current_user.username}} 您好!
+              </p>
+              <a class="btn btn-outline-light" href="{{ url_for('logout')}}">
+                登出
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <div class="row" style="height: 100%">
+          <div class="col-fixed pt-5" style="background: #343a40">
+            <div class="d-grid gap-1 w-100">
+              <a
+                class="btn btn-primary btn-secondary fs-5"
+                href="{{ url_for('yaoadmin_index')}}"
+                ><i class="bi bi-house-fill"></i> 首頁
+              </a>
+              <a
+                class="btn btn-primary btn-secondary fs-5"
+                href="{{ url_for('yaoadmin_album')}}"
+                ><i class="bi bi-image"></i>
+                活動花絮
+              </a>
+            </div>
+          </div>
+          <div
+            class="col"
+            style="background-color: rgb(250, 235, 217); height: 100%"
+          >
+            <div class="item" style="min-height: 750px">
+              <!--資料都放在這邊!!!!-->
+              {% block body %} {% endblock %}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="footer" style="background-color: #343a40">
+              <div class="footer-inner" style="color: #999999; font-size: 12px">
+                © 2023 Yaoweb Taiwan All Rights Reserved
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='assets/js/zoom.js')}}"></script>
+  </body>
+</html>
