@@ -1,0 +1,78 @@
+{% extends "base.html" %} {% block body %}
+
+<section class="section">
+  <!-- Background image -->
+  <div
+    class="bg-image d-flex justify-content-center align-items-center"
+    style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp');
+      height: 50vh;
+    "
+  >
+    <h1 class="text-white">最新消息</h1>
+  </div>
+</section>
+
+<!-- Title -->
+<section class="section pt-0">
+  <link
+    href="{{ url_for('static',filename='assets/css/bootstrap.min.css') }}"
+    rel="stylesheet"
+  />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2">
+        <h6 class="title">分類</h6>
+        <ul class="list-unstyled sticky-top mb-5 mb-md-0" style="top: 7.5rem">
+          <li class="nav-link text-xs text-uppercase mb-2">
+            <a href="{{ url_for('news') }}" target="_self"> 所有分類 </a>
+          </li>
+          <li class="nav-link text-xs text-uppercase mb-2">
+            <a href="#"> 活動公告 </a>
+          </li>
+          <li class="nav-link text-xs text-uppercase mb-2">
+            <a href="#"> 會議公告 </a>
+          </li>
+          <li class="nav-link text-xs text-uppercase mb-2">
+            <a href="#"> 系統公告 </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10">
+        <div>
+          <h3 class="mb-4">最新消息</h3>
+        </div>
+        <div class="pb-5 mb-5 border-bottom"></div>
+        <div class="row">
+          <div class="col">
+            <h2 style="font-weight: bold; border-bottom: solid 3px #00863c">
+              {{news.title}}
+            </h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <pre>{{news.text | safe}}</pre>
+          </div>
+        </div>
+        <div class="pb-5 mb-5 border-bottom"></div>
+        <div class="row">
+          {% for item in news.new_imgs %}
+          <div class="col">
+            <div class="card" style="width: 20rem">
+              <img
+                src="data:image/jpeg;base64,{{base64.b64encode(item.file.read()).decode('utf-8')}}"
+                class="card-img-top img-thumbnail"
+                alt="..."
+                data-action="zoom"
+              />
+            </div>
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

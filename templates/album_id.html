@@ -49,7 +49,7 @@
         </div>
         <div class="row">
           <div class="col">
-            <pre>{{album.text}}</pre>
+            <pre>{{album.text| safe}}</pre>
           </div>
         </div>
         <div class="pb-5 mb-5 border-bottom"></div>
@@ -63,10 +63,6 @@
                 alt="..."
                 data-action="zoom"
               />
-
-              <div class="card-body">
-                <p class="card-text">{{item.name}}</p>
-              </div>
             </div>
           </div>
           {%endfor%}

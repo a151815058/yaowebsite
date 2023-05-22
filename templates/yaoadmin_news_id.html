@@ -1,0 +1,72 @@
+{% extends "yaoadmin_base.html" %} {% block body %}
+<div class="container-fluid g-0">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="pt-4">修改最新消息</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-white" style="background-color: #4b8df8">
+        <div class="card-header"><i class="bi bi-wrench"></i></div>
+        <div class="card-body bg-light text-dark">
+          <h5>{{current_user.username}} 您好~</h5>
+          <h5>歡迎使用CMS網站管理系統~~</h5>
+          <form action="" method="POST" enctype="multipart/form-data">
+            {{form.hidden_tag()}} {{form.title.label}}
+            {{form.title(type="text")}}
+            <br />
+            {{form.add_date.label}} {{form.add_date()}}
+            <br />
+            {{form.tag.label}} {{form.tag()}}
+            <br />
+
+            <br />
+            {{form.text()}}
+            <br />
+            {{form.show.label}} {{form.show()}}
+            <br />
+            {{form.new_imgs.label}} {{form.new_imgs(multiple="multiple")}} {%
+            for error in form.new_imgs.errors %}
+            <br />
+            <span style="color: red">{{error}}</span>
+            {% endfor %}
+            <br />
+            {{form.submit()}}{{form.delete(style="margin-left:3rem",
+            onclick="return confirm('是否確定刪除相簿')")}}
+          </form>
+          {{ ckeditor.load(custom_url=url_for('static',
+          filename='ckeditor/ckeditor.js')) }} {{
+          ckeditor.config(name='text',height=500) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row pt-5">
+    {% if news.new_imgs.count() > 0 %} {% for item in news.new_imgs %}
+    <div class="col">
+      <div class="card" style="width: 22rem">
+        <img
+          src="data:;base64,{{base64.b64encode(item.file.read()).decode('utf-8')}}"
+          class="card-img-top img-thumbnail"
+          alt="..."
+          data-action="zoom"
+        />
+
+        <div class="card-body">
+          <p class="card-text">{{item.name}}</p>
+          <a
+            class="btn btn-outline-primary"
+            href="{{url_for('api_del_news_img',news_id=news.id,news_img_file=item.file._id)}}"
+            onclick="return confirm('是否確定刪除')"
+            >刪除</a
+          >
+        </div>
+      </div>
+    </div>
+    {% endfor %} {% endif %}
+    <div style="padding-top: 3rem"></div>
+  </div>
+</div>
+
+{% endblock %}

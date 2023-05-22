@@ -18,7 +18,7 @@
             <br />
             {{form.text.label}}
             <br />
-            {{form.text(rows=20,style="width:100%")}}
+            {{form.text}}
             <br />
             {{form.show.label}} {{form.show()}}
             <br />
@@ -34,6 +34,9 @@
             {{form.submit()}}{{form.delete(style="margin-left:3rem",
             onclick="return confirm('是否確定刪除相簿')")}}
           </form>
+          {{ ckeditor.load(custom_url=url_for('static',
+          filename='ckeditor/ckeditor.js')) }} {{
+          ckeditor.config(name='text',height=500) }}
         </div>
       </div>
     </div>
@@ -43,7 +46,7 @@
     <div class="col">
       <div class="card" style="width: 22rem">
         <img
-          src="data:;base64,{{base64.b64encode(item.file.read()).decode('utf-8')}}"
+          src="data:image/jpeg;base64,{{base64.b64encode(item.file.read()).decode('utf-8')}}"
           class="card-img-top img-thumbnail"
           alt="..."
           data-action="zoom"

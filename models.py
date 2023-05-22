@@ -15,8 +15,8 @@ class User(UserMixin,Document):
     def check_password(self,password):
         return check_password_hash(self.password_hash,password)
     
-#Album_img EmbeddedDocument
-class Album_img(EmbeddedDocument):
+#EDA_img EmbeddedDocument
+class EDA_img(EmbeddedDocument):
      name = StringField()
      file = FileField()
 #album models
@@ -24,10 +24,19 @@ class Album(Document):
     meta = {"collection" : "albums"}
     title = StringField(required = True,min_length=1)
     text = StringField()
-    show = IntField(default=1)
+    show = StringField()
     index = IntField(default=0)
-    album_imgs = EmbeddedDocumentListField(Album_img)
+    album_imgs = EmbeddedDocumentListField(EDA_img)
    
+class New(Document):
+    meta = {"collection" : "news"}
+    title = StringField(required = True,min_length=1)
+    text = StringField()
+    show = StringField()
+    tag = StringField()
+    add_date = DateField()
+    new_imgs = EmbeddedDocumentListField(EDA_img)
+
 
 class Fs_chunks(Document):
     meta = {"collection" : "fs.chunks"}
